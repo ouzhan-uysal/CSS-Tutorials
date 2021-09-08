@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Tutorial - 1</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="keywords" content="CSS"> <!-- Anahtar kelimeler -->
+    <meta name="description" content="CSS Tutorials"> <!-- Açıklama -->
+    <meta name="author" content="Oğuzhan Uysal"> <!-- Siteyi kim oluşturdu. -->
+
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+</head>
+
+<body>
+    <form> <!-- action="process.php" yazarak belirtilen backend dosyasına form içerisindeki bilgiler gönderilir.-->
+        <label for="name">Ad:</label>  <!-- for: id'si aynı olan input ile arasında bağlantı kurar. -->
+        <input type="text" id="name" name="name">
+        <br>
+
+        <label for="surname">Soyad:</label>
+        <input type="text" id="surname" name="surname">
+        <br>
+
+        <label for="password">Şifre: </label>
+        <input type="password" id="password" name="password">
+        <br>
+
+        <label for="email">E-Posta:</label>
+        <input type="email" id="email" name="email">
+        <br>
+
+        <label for="date">Tarih:</label>
+        <input type="date" id="date" name="date">
+        <br>
+
+        <label for="gender">Cinsiyet</label>    <br>
+        <label for="gender">Erkek</label>
+        <input type="radio" id="gender" name="gender" value="Erkek">
+        <label for="gender">Kadın</label>
+        <input type="radio" id="gender" name="gender" value="Kadın">
+        <label for="gender">Diğer</label>
+        <input type="radio" id="gender" name="gender" value="Diğer">
+        <br>
+
+        <label for="hobbies">Hobiler</label>    <br>
+        <label for="tech">Teknoloji</label>
+        <input type="checkbox" name="tech" id="tech">
+        <label for="music">Müzik</label>
+        <input type="checkbox" name="music" id="music">
+        <label for="art">Sanat</label>
+        <input type="checkbox" name="art" id="art">
+        <br>
+
+        <label for="degree">Öğrenim</label>
+        <select name="degree" id="degree">
+            <option value="Bachelor">Linans</option>
+            <option value="Msc">Yüksek Lisans</option>
+            <option value="Phd">Doktora</option>
+        </select>
+        <br>
+        
+        <br>
+        <input type="reset" value="RESET">
+        <input type="submit" value="SUBMIT">
+    </form>
+</body>
+
+</html>
