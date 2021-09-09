@@ -10,61 +10,92 @@
     <meta name="description" content="CSS Tutorials"> <!-- Açıklama -->
     <meta name="author" content="Oğuzhan Uysal"> <!-- Siteyi kim oluşturdu. -->
 
-    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <link rel='stylesheet' type='text/css' media='screen' href='1-style.css'>
 </head>
 
 <body>
-    <form> <!-- action="process.php" yazarak belirtilen backend dosyasına form içerisindeki bilgiler gönderilir.-->
-        <label for="name">Ad:</label>  <!-- for: id'si aynı olan input ile arasında bağlantı kurar. -->
-        <input type="text" id="name" name="name">
-        <br>
+    <header>
 
-        <label for="surname">Soyad:</label>
-        <input type="text" id="surname" name="surname">
-        <br>
+    </header>
 
-        <label for="password">Şifre: </label>
-        <input type="password" id="password" name="password">
-        <br>
+    <nav>
 
-        <label for="email">E-Posta:</label>
-        <input type="email" id="email" name="email">
-        <br>
+    </nav>
 
-        <label for="date">Tarih:</label>
-        <input type="date" id="date" name="date">
-        <br>
+    <section id="section-1">
+        <article>
+            <form>
+                <!-- action="process.php" yazarak belirtilen backend dosyasına form içerisindeki bilgiler gönderilir.-->
+                <label for="name">Ad:</label> <!-- for: id'si aynı olan input ile arasında bağlantı kurar. -->
+                <input type="text" id="name" name="name" placeholder="Adınız">
+                <br>
 
-        <label for="gender">Cinsiyet</label>    <br>
-        <label for="gender">Erkek</label>
-        <input type="radio" id="gender" name="gender" value="Erkek">
-        <label for="gender">Kadın</label>
-        <input type="radio" id="gender" name="gender" value="Kadın">
-        <label for="gender">Diğer</label>
-        <input type="radio" id="gender" name="gender" value="Diğer">
-        <br>
+                <label for="surname">Soyad:</label>
+                <input type="text" id="surname" name="surname" placeholder="Soyadınız">
+                <br>
 
-        <label for="hobbies">Hobiler</label>    <br>
-        <label for="tech">Teknoloji</label>
-        <input type="checkbox" name="tech" id="tech">
-        <label for="music">Müzik</label>
-        <input type="checkbox" name="music" id="music">
-        <label for="art">Sanat</label>
-        <input type="checkbox" name="art" id="art">
-        <br>
+                <label for="password">Şifre: </label>
+                <input type="password" id="password" name="password" placeholder="Şifreniz">
+                <br>
 
-        <label for="degree">Öğrenim</label>
-        <select name="degree" id="degree">
-            <option value="Bachelor">Linans</option>
-            <option value="Msc">Yüksek Lisans</option>
-            <option value="Phd">Doktora</option>
-        </select>
-        <br>
-        
-        <br>
-        <input type="reset" value="RESET">
-        <input type="submit" value="SUBMIT">
-    </form>
+                <label for="email">E-Posta:</label>
+                <input type="email" id="email" name="email" placeholder="E-Posta Adresiniz">
+                <br>
+
+                <label for="date">Tarih:</label>
+                <input type="date" id="date" name="date">
+                <br>
+
+                <label for="gender">Cinsiyet</label> <br>
+                <label for="gender">Erkek</label>
+                <input type="radio" id="gender" name="gender" value="Erkek">
+                <label for="gender">Kadın</label>
+                <input type="radio" id="gender" name="gender" value="Kadın">
+                <label for="gender">Diğer</label>
+                <input type="radio" id="gender" name="gender" value="Diğer">
+                <br>
+
+                <label for="hobbies">Hobiler</label> <br>
+                <label for="tech">Teknoloji</label>
+                <input type="checkbox" name="tech" id="tech">
+                <label for="music">Müzik</label>
+                <input type="checkbox" name="music" id="music">
+                <label for="art">Sanat</label>
+                <input type="checkbox" name="art" id="art">
+                <br>
+
+                <label for="degree">Öğrenim</label>
+                <select name="degree" id="degree">
+                    <option value="Bachelor">Linans</option>
+                    <option value="Msc">Yüksek Lisans</option>
+                    <option value="Phd">Doktora</option>
+                </select>
+                <br>
+
+                <textarea name="message" id="message" cols="50" rows="10"
+                    placeholder="Mesajınızı buraya yazınız."></textarea>
+
+                <br>
+                <input type="reset" value="RESET">
+                <input type="submit" value="SUBMIT">
+            </form>
+        </article>
+    </section>
+
+    <section id="section-2">
+        <article>
+
+        </article>
+    </section>
+
+
+    <aside>
+        <a id="link" href="https://github.com/ouzhan-uysal">GitHub</a>
+    </aside>
+
+    <footer>
+        <p class="parag1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Asperiores consequatur quod eligendi consequuntur, provident a odit quis, similique voluptate incidunt, error eaque. Quas aliquid quo illo officia esse harum ad praesentium, quidem molestiae, rerum magni minima porro aut? Ipsum veritatis deserunt maiores enim ullam, autem voluptates recusandae earum impedit, facere sunt culpa eum ut, tempora eligendi. Sint magnam quae vero! Quidem optio in accusamus nobis sapiente repellat dolore accusantium reiciendis harum aspernatur molestiae quia praesentium expedita quisquam voluptate, voluptatibus saepe error aliquid rerum commodi autem! At suscipit, placeat rem repellat nam dignissimos omnis qui asperiores iste amet, nobis aut praesentium.</p>
+    </footer>
 </body>
 
 </html>

@@ -1,0 +1,50 @@
+/*
+    Pseudo Class: ::after ::before :hover :active :checked :visited :focus
+
+    Element inline iken width ve height verilemez. Ya Div gibi display: block olacak yada elementin display değişkeninin değerini inline-block yaparak width ve height özelliği verebilirsin.
+*/
+#link {
+    color: white;
+    background-color: blue;
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px;
+    margin: 10px;
+}
+#link:visited {
+    color: cadetblue;
+}
+#link:hover {
+    color: blue;
+    background-color: white;
+    border: 1px solid blue;
+    border-radius: 5px;
+}
+#link:active {
+    color: orange;
+}
+input:focus {
+    outline:  none;     /* Tarayıcı tarafından otomatik atanan border */
+    font-size: 1.5em;
+    border: 2px solid red;
+}
+
+.parag1 {
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    line-height: 1.5em;
+}
+.parag1::first-letter {
+    font-size: 50px;
+    color: blue;
+}
+.parag1::first-line {
+    color: brown;
+}
+
+.parag1::after {
+    content: "Paragrafın sonuna ekleme.";
+}
+.parag1::before {   /*content: "Paragrafın başına ekleme. "*/
+    content: url("https://cdn.iconscout.com/icon/free/png-256/instagram-1946323-1646407.png")
+}
