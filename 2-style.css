@@ -1,0 +1,54 @@
+p {
+    font-size: 1.5em;
+}
+p:nth-child(1) {
+    color: red;
+}
+P:first-child {
+    background-color: aqua;
+}
+p:nth-child(3) {
+    color: blue;
+}
+p:last-child {
+    background-color: purple;
+}
+p:nth-child(even) { /* "odd" dersek 1-3-5-...*/
+    background-color: yellowgreen;
+}
+
+ul {
+    font-size: 1.5em;
+    list-style-type: none;  /* elementlerin başındaki noktayı kaldırır*/
+}
+ul li:nth-child(2n) {     /*n=0'dan başlayarak belirlenir. */
+    background-color: blueviolet;
+}
+ul li:nth-child(2n+1) {
+    background-color: teal;
+}
+
+table, tr, td, th {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+table {
+    width: 50%;
+    margin: 0 auto;  /*Sayfayı ortala*/
+    font-size: 1.5em;
+}
+th, td {
+    padding: 10px;
+}
+thead tr {
+    background-color: goldenrod;
+}
+tbody tr {
+    text-align: center;
+}
+tbody tr:nth-child(odd){
+    background-color: #d2d2d2;
+}
+tbody tr:hover {
+    background-color: crimson;
+}

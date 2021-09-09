@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Position</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+    <style>
+        /*
+        fixed: sayfada sabit bulunduğu noktada kalır. scrolla aşağı yukarı insen bile.
+        relative: hareket ettirilirse bulunduğu konumdan harekete başlar.
+        */
+        .fixed-topbar {
+            width: 50%;
+            padding: 20px;
+            background-color: black;
+            color: white;
+            text-align: center;
+            position: fixed;
+            right: 20px;   /* Sağa yanaştır ve 20px arala */
+        }
+
+        .red {
+            width: 200px;
+            height: 200px;
+            background-color: darkred;
+            position: relative; /* Bulunduğu konumdan hareket etmeye başlar */
+            top: 0;
+            left: 0;
+            z-index: 1; /*z-index değeri hangisi daha yüksekse o bize daha yakın olur.*/
+        }
+        .blue {
+            width: 200px;
+            height: 200px;
+            background-color: darkblue;
+            position: relative;
+            left: 100px;
+            bottom: 100px;
+        }
+
+        .outer-box {
+            width: 200px;
+            height: 200px;
+            background-color: silver;
+            position: fixed;
+            right: 20px;
+        }
+        .inner-box {
+            width: 50px;
+            height: 50px;
+            background-color: chocolate;
+            position: absolute; /* div kapsayıcıya göre kullanılacaksa. Ama bunu kapsayan div'in position'ı belirtilmiş olmalı. Ya Relative ya da fixed olarak. Eğer parent'ında position belirtilmemişse bir üst parent'a göre konumlanır.*/
+            bottom: 20px;
+            right: 20px;
+        }
+
+        span {
+            width: 50px;
+            height: 50px;
+            display: inline-block;
+            background-color: red;
+            position: relative;
+            left: 75px;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body style="height: 1500px;">
+    <div class="fixed-topbar">MeqRims</div>
+    <div class="red"></div>
+    <div class="blue"></div>
+
+    <div class="outer-box">
+        <div class="inner-box">
+
+        </div>
+    </div>
+
+    <span></span>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit beatae numquam quod et assumenda quidem.
+</body>
+</html>
