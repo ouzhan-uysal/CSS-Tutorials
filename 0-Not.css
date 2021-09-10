@@ -1,0 +1,63 @@
+/*
+Selectors:
+    * --> her şeye erişim
+
+Child Selector:
+    .lastDiv > label {
+        color: var(--turquois, #053251);
+    }
+
+Descendant Selector: div'in altındaki p'nin hepsini değiştirir.
+    div p {
+        font-size: 25px;
+    }
+
+Attribute selector: Belirtilen type'ların stilini değiştirir.
+    input(type="text") {
+        margin-bottom: 5px;
+    }
+
+Nth of Child Selector:  checklistin altındaki elementlerden 3. olanın stilini değiştir.
+    .checkList span:nth-child(3){
+        text-decoration: underline;
+    }
+
+Nth of Type Selector: yukardakinden farklı sadece span'leri sayar. aradaki elementleri işin içine katmaz
+    .div:nth-of-type(3) p {
+        background-color: var(--crimson, #ff0000);
+    }
+
+    her iki span'de bir renk değişimi (odd/even):
+    .checkList span:nth-of-type(even) {
+        border: 5px solid black;
+    }
+
+Pseudo-classes:
+    ul li input:checked {
+        margin-left: 10px
+    }
+
+Sibling Selectors:
+    x
+
+Pseudo-elements:
+    first-letter: ilk elemana erişim
+    scrollbar   : 
+    scrollbar-track:
+
+
+
+- Media Queries - Backend'de if/else gibi
+    @media  --> koşul belirterek stilini değiştirme. (Örn: min-width: 480 olduğunda kodun boyutlarını değiştir. -Farklı cihazlara göre ayarlama)
+
+    Örn: @media screen and (min-wdith: 480px)
+    
+    # Desktop, Tablet, Mobile için ayrı ayrı boyutlarına göre düzenlemeler bununla yapılır.
+
+*/
+
+/*
+Projede:
+Responsive yapı oluşturulacak.
+Layout yapısında yeri, position değiştir media queries kullanarak.
+*/

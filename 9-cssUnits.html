@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive - CSS Units</title>
+    <!-- Responsive Units: em, rem, %, vw, vh -->
+    <!-- 
+        em  : Parent'a bağlı
+        rem : Root'a bağlı
+        %   : HTML'in değerinin % sini alır. HTML = 20px ise, 50%'nin Sonucu: = 10px olur.
+        vw (Viewport Width) : Sayfanın tüm genişliğini baz alır. Burada genişlik 100 kabul edirse, width:40vw; derse sayfanın %40'nı kaplamasını söylemiş oluruz.
+        vh(Viewport Height) : Sayfanın tüm yüksekliğini baz alır.
+     -->
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        div {
+            font-size: 1.5em;   /*Burada parent html'in default değeri 16px, bu değere göre oranlar. Sonuç: 24px*/
+        }
+        p {
+            font-size: 1.5em;   /*bir üst class taki div elementine göre oranlar. Sonuç: 36px*/
+            padding: 1.5em;     /*Bir üstündeki font-size'a göre oranlar. Sonuç: 54px*/
+        }
+        .box {
+            width: 50vw;
+            height: 10vh;
+            background-color: #e3e3e3;
+        }
+        .background {
+            background: url("https://www.ekoyapidergisi.org/images/cevre_1528110114.jpg");
+            background-size: cover;
+            height: 100vh;
+            color: white;
+            padding: 10rem;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .background h1 {
+            margin-bottom: 1rem;
+            font-size: 3rem;
+        }
+        .background p {
+            font-size: 2rem;
+            letter-spacing: 1px;
+        }
+        @media(max-width:500px) {
+            .background h1 {
+                margin-bottom: 0.5rem;
+                font-size: 2rem;
+            }
+            .background p {
+                font-size: 1rem;
+                display: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam beatae facilis aliquid corporis distinctio quod voluptatibus. Magni omnis facilis aspernatur?</p>
+    </div>
+    <div class="box"></div>
+    <div class="background">
+        <h1>Welcome to the Site</h1>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellat, vel.</p>
+    </div>
+</body>
+</html>
