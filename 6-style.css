@@ -1,0 +1,49 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box; /**/
+}
+.box {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    text-align: center;
+    background-color: #e3e3e3;
+    border: 1px solid black;
+}
+.container {
+    width: 75%;
+    min-height: 400px;  /*min-height: Content'in belirtilen px'li geçerse 600px üzerinede çıkabilir.*/
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;    /* Düzlemin yatay mı dikey mi olacağının kararı --> Default: row*/
+
+    justify-content: flex-start;  /* Yatay hizalama */
+    align-items: flex-start;    /* Dikey hizalama */
+    flex-wrap: wrap;    /* Yatayda sığmayan elemanları bi alta satıra kaydırır.*/
+    /* overflow: hidden; */
+
+    background: tomato;
+}
+
+
+.box2 {
+    width: 200px;
+    height: 100;
+    margin: 10px;
+    text-align: center;
+    background-color: #e3e3e3;
+    border: 1px solid black;
+}
+.container2 {
+    width: 75%;
+    min-height: 400px;
+    margin: 0 auto;
+    flex-direction: column; /*Cross ve main axis değişti.*/
+    
+    justify-content: flex-end;
+    align-items: center;
+    flex-wrap: wrap;
+
+    background-color: cadetblue;
+}

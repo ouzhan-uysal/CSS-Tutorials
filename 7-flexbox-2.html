@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Flexbox 2</title>
+
+    <style>
+        .container {
+           width: 75%; 
+           min-height: 400px;
+           margin: 0 auto;
+           display: flex;
+           flex-direction: row;
+           justify-content: space-around;
+           align-items: center;
+           background-color: black;
+        }
+        .box {
+            text-align: center;
+            background-color: #e3e3e3;
+            width: 200px;
+            height: 100px;
+            border: 1px solid black;
+            margin: 10px;
+        }
+        .box-1 {
+            order: 3;   /*Flex item'ların sırasını değiştirmemizi sağlar. */
+            background-color: blue;
+            align-self: center;
+        }
+        .box-2 {
+            order: 1;
+            background-color: red;
+        }
+        .box-3 {
+            order: 2;
+            background-color: green;
+            align-self: flex-end;   /*Kendi(self) konumunu değiştirme*/
+        }
+        
+        .box-4 {
+            order: 3;   /*Flex item'ların sırasını değiştirmemizi sağlar. */
+            background-color: blue;
+            /* Ekranın 6'da 1'ini dolduracak. (6 olmasının nedeni diğer flex-grow sayılarının toplamından geliyor.)*/
+            /* flex-grow: 1; */
+        }
+        .box-5 {
+            order: 1;
+            background-color: red;
+            /*6'da 2sini kaplayacak*/
+            /* flex-grow: 2; */
+        }
+        .box-6 {
+            order: 2;
+            background-color: green;
+            /*ekranın %50sini kaplayacak*/
+            /* flex-grow: 3; */
+            /*sadece tek bir content'te flex-grow:1; verilirse boş kalan yerleri bu element sığdırılır. 2 elemente flex:1; denirse 2 element aynı oranda paylaşır. */
+            flex-grow: 1;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box-1"></div>
+        <div class="box box-2"></div>
+        <div class="box box-3"></div>
+    </div>
+    <br>
+    <div class="container">
+        <div class="box box-4"></div>
+        <div class="box box-5"></div>
+        <div class="box box-6"></div>
+    </div>
+</body>
+</html>

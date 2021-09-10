@@ -1,0 +1,56 @@
+/* body {
+    background-color: red;
+} */
+/* Max-Width 768px olduğunda aşağıdaki kod satırı aktif olacak */
+/* Tablet */
+/* @media(max-width: 768px) {
+    body {
+        background-color: green;
+    }
+} */
+/* Phone */
+/* @media(max-width: 500px) {
+    body {
+        background-color: blue;
+    }
+} */
+
+/* p {
+    display: none;
+}
+@media(min-width: 768px) {
+    p {
+        display: block;
+    }
+} */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+}
+.box {
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #e3e3e3;
+    width: 25%;
+}
+/* Tablet */
+@media (max-width: 768px) {
+    .box {
+        width: 50%;
+    }
+}
+/* Mobile */
+@media (max-width: 500px) {
+    .box {
+        width: 100%;
+    }
+}
