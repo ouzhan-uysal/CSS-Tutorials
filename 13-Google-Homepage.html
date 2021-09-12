@@ -1,29 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Google</title>
 
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="13-style.css">
 </head>
+
 <body>
     <div class="container">
         <div class="logo">
             <img src="13-logo.png" alt="google logo">
         </div>
-        <div class="searchbar">
-            <form>
-                <img src="13-voicelogo.png" alt="voice logo">
-                <input type="search">
-            </form>
-            <div class="btns">
-                <button>Google'da Ara</button>
-                <button>Kendimi Şanslı Hissediyorum</button>
+        <div class="search">
+            <div class="split-searchbar">
+                <div class="search-icon">
+                    <i class="fa fa-search"></i>
+                </div>
+                <div class="searchbar">
+                    <input type="search">
+                </div>
+                <div class="voicelogo">
+                    <img src="13-voicelogo.png" alt="voice logo">
+                </div>
             </div>
+        </div>
+        <div class="btns">
+            <input type="button" value="Google'da Ara"></input>
+            <input type="button" value="Kendimi Şanslı Hissediyorum"></input>
         </div>
         <div class="info">Google'ı kullanabileceğiniz diğer diller: English</div>
     </div>
 </body>
+
 </html>
