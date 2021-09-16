@@ -1,0 +1,7 @@
+@media all and (max-width: 575px) {
+    body {
+        grid-template-areas: "nav" "header" "article" "aside" "footer";
+        grid-template-rows: 1fr 80px 70px 1fr 70px;
+        grid-template-columns: 1fr;
+    }
+}
