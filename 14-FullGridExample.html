@@ -18,14 +18,14 @@
     <link rel="stylesheet" href="css/14-main.css">
     <link rel="stylesheet" href="css/14-responsive.css">
 
-    <script src="14-main.js" ></script>
+    <script src="14-main.js" defer></script>
 </head>
 
 <body>
-    <header id="pageHeader">
+    <header id="mainHeader">
         <div class="header-split">
             <div class="headerLeftLogo">
-                <img src="" alt="Header Left Logo">
+                <img src="https://cdn.iconscout.com/icon/free/png-256/king-1409999-1192966.png" alt="Header Left Logo">
             </div>
 
             <div class="searchbar">
@@ -38,7 +38,8 @@
             </div>
 
             <div class="headerRightLogo">
-                <img src="" alt="Header Right Logo">
+                <img src="https://www.svgimages.com/svg-image/s10/roaring-lion-image-256x256.png"
+                    alt="Header Right Logo">
             </div>
         </div>
     </header>
@@ -76,15 +77,82 @@
     </nav>
 
     <article id="mainArticle">
+        <form>
+            <ul class="grid-form">
+                <li>
+                    <label for="company">Company:</label>
+                    <input type="text" name="company" id="company">
+                </li>
+                <li>
+                    <label for="fname">First Name:</label>
+                    <input type="text" name="fname" id="fname">
+                </li>
+                <li>
+                    <label for="lname">Last Name:</label>
+                    <input type="text" name="lname" id="lname">
+                </li>
+                <li>
+                    <label for="email">Email Address:</label>
+                    <input type="email" name="email" id="email">
+                </li>
+                <li>
+                    <label for="title">Title:</label>
+                    <input type="text" name="title" id="title">
+                </li>
+                <li>
+                    <label for="phone">Phone:</label>
+                    <input type="phone" name="phone" id="phone">
+                </li>
+                <li>
+                    <label for="registration">Cancel Registration:</label>
+                    <input type="checkbox" name="registration" id="registration">
+                </li>
+                <li>
+                    <label for="trainingSession">252 Training Session 2010:</label>
+                    <input type="date" name="trainingSession" id="trainingSession">
+                </li>
+                <li>
+                    <label for="jobFunc">Job Function:</label>
+                    <input type="radio" name="jobFunc" id="jobFunc">
+                </li>
+                <li>
+                    <label for="dietary">Dietary Requirements:</label>
+                    <input type="text" name="dietary" id="dietary">
+                </li>
+                <li>
+                    <label for="expec">Exceptations:</label>
+                    <textarea name="expec" id="expec" cols="30" rows="10"></textarea>
+                </li>
+                <li>
+                    <input type="button" name="submit" id="submit-btn" value="Submit">
+                    <input type="reset" name="reset" id="reset-btn">
+                </li>
+            </ul>
+        </form>
+
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close-modal"></span>
+                    <h2>Form Informations</h2>
+                </div>
+                <div class="modal-body" id="modal-body">
+                </div>
+                <!-- <div class="modal-footer">
+                        <h3>Modal Footer</h3>
+                    </div> -->
+            </div>
+        </div>
 
     </article>
 
 
     <aside id="mainAside">
-
+        <div class="grid-container" id="contents">
+        </div>
     </aside>
 
-    <footer id="pageFooter">© 2021 GS</footer>
+    <footer id="mainFooter">© 2021 GS</footer>
 </body>
 
 </html>

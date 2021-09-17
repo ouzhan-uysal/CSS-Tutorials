@@ -1,8 +1,8 @@
-@media all and (max-width: 575px) {
+@media all and (max-width: 760px) {
   body {
         grid-template-areas: "nav" "header" "article" "aside" "footer";
-    -ms-grid-rows: 1fr 80px 70px 1fr 70px;
-        grid-template-rows: 1fr 80px 70px 1fr 70px;
+    -ms-grid-rows: 1fr 10% 1fr 1fr 10%;
+        grid-template-rows: 1fr 10% 1fr 1fr 10%;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
