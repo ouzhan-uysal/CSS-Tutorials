@@ -15,6 +15,7 @@ body {
   grid-row-gap: 10px;
   grid-column-gap: 10px;
   margin: 0;
+  height: 100vh;
 }
 
 header,
@@ -36,8 +37,11 @@ aside {
 #mainHeader .header-split {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 25% 1fr 25%;
-      grid-template-columns: 25% 1fr 25%;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-grid-columns: (20% minmax(30%, 30%) 10%)[auto-fill];
+      grid-template-columns: repeat(auto-fill, 20% minmax(30%, 30%) 10%);
   text-align: center;
   height: 100%;
   -ms-flex-line-pack: center;
@@ -46,32 +50,38 @@ aside {
 
 #mainHeader .header-split div {
   height: 100%;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 #mainHeader .header-split img {
   height: 5em;
 }
 
-#mainHeader .header-split .searchbar .searchbar-split {
+#mainHeader .header-split .searchbar form {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 10% 1fr;
-      grid-template-columns: 10% 1fr;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
   position: relative;
 }
 
-#mainHeader .header-split .searchbar .searchbar-split form {
-  position: absolute;
-}
-
-#mainHeader .header-split .searchbar .searchbar-split form input {
+#mainHeader .header-split .searchbar form input {
+  padding-left: 3rem;
   border-radius: 5px;
+  height: 3em;
 }
 
-#mainHeader .header-split .searchbar .searchbar-split form i {
+#mainHeader .header-split .searchbar form i {
   display: block;
   position: absolute;
-  left: 0;
+  font-size: 2em;
+  padding-left: .5rem;
+  padding-top: .5rem;
 }
 
 #mainArticle {
@@ -84,6 +94,9 @@ aside {
 #mainArticle form {
   display: -ms-grid;
   display: grid;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #mainArticle form ul {
@@ -94,7 +107,7 @@ aside {
 }
 
 #mainArticle form ul li {
-  padding: 1em;
+  padding-bottom: .5rem;
   color: var(--mainColor);
   display: -ms-grid;
   display: grid;
@@ -201,6 +214,9 @@ aside {
   margin: 5px;
   -ms-grid-columns: (minmax(20em, 1fr))[auto-fill];
       grid-template-columns: repeat(auto-fill, minmax(20em, 1fr));
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 #mainAside .grid-container .grid-item img {

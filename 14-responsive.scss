@@ -1,7 +1,24 @@
-@media all and (max-width: 760px) {
+@media all and (max-width: 768px) {
     body {
         grid-template-areas: "nav" "header" "article" "aside" "footer";
         grid-template-rows: 1fr 10% 1fr 1fr 10%;
         grid-template-columns: 1fr;
+        #mainHeader {
+            .header-split {
+                img {
+                    display: none;
+                }
+            }
+        }
+        #mainArticle {
+            display: none;
+        }
+        #mainNav {
+            .nav-split {
+                .nav-links {
+                    display: none;
+                }
+            }
+        }
     }
 }
