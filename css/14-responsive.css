@@ -1,19 +1,16 @@
-@media all and (max-width: 768px) {
-  body {
-        grid-template-areas: "nav" "header" "article" "aside" "footer";
-    -ms-grid-rows: 1fr 10% 1fr 1fr 10%;
-        grid-template-rows: 1fr 10% 1fr 1fr 10%;
-    -ms-grid-columns: 1fr;
-        grid-template-columns: 1fr;
-  }
-  body #mainHeader .header-split img {
+@media screen and (max-width: 960px) {
+  .main-content article {
     display: none;
   }
-  body #mainArticle {
-    display: none;
+  .main-content aside .grid-container {
+    -ms-grid-columns: (minmax(10em, 1fr))[auto-fill];
+        grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
   }
-  body #mainNav .nav-split .nav-links {
-    display: none;
+}
+
+@media (max-width: 500px) {
+  .main-content aside {
+    overflow: auto;
   }
 }
 /*# sourceMappingURL=14-responsive.css.map */

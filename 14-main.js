@@ -8,7 +8,7 @@ fetchPosts = async () => {
             // console.log(element);
             gridElem += `
                         <div class="grid-item">
-                        <img src="https://cdn.jsdelivr.net/emojione/assets/4.0/png/128/1f981.png" alt="item${el.id}">
+                        <img src="images/ops.png" alt="item${el.id}">
                         <p class="title">${el.title}</p>
                         <p class="description">${el.body}</p>
                         <button class="readMore" id="readMore">Read More</button>
@@ -69,6 +69,7 @@ let modal = document.getElementById("modal");
 let openModal = document.getElementById("submit-btn");
 let closeModal = document.getElementsByClassName("close-modal")[0];
 
+
 openModal.onclick = function () {
     const company = document.getElementById("company").value;
     const fname = document.getElementById("fname").value;
@@ -99,6 +100,7 @@ openModal.onclick = function () {
 
     // Show Modal
     modal.style.display = "block";
+
 }
 closeModal.onclick = function () {
     modal.style.display = "none";
@@ -113,22 +115,18 @@ window.onclick = function (event) {
 
 /* Navbar Link Actions */
 $(document).ready(function () {
-    $(".nav-links li").on("click", function () {
+    $(".navLink li").on("click", function () {
         var dataId = $(this).attr("data-id");
-        const bodyTag = document.querySelector("body");
-        const formTag = document.getElementById("mainArticle");
-        const gridTag = document.getElementById("mainAside");
+        const formTag = document.querySelector(".form-content");
+        const gridTag = document.querySelector(".grid-content");
         if (dataId === "show") {
-            bodyTag.style.gridTemplateColumns = "20% 1fr 50%";
             formTag.style.display = "";
             gridTag.style.display = "";
         } else if (dataId === "showForm") {
-            bodyTag.style.gridTemplateColumns = "20% 1fr 0";
-            formTag.style.display = "";
+            formTag.style.display = "flex";
             gridTag.style.display = "none";
         } else if (dataId === "showGrid") {
-            bodyTag.style.gridTemplateColumns = "20% 0 1fr";
-            gridTag.style.display = "";
+            gridTag.style.display = "flex";
             formTag.style.display = "none";
         } else if (dataId === "hide") {
             formTag.style.display = "none";
@@ -147,3 +145,9 @@ document.body.addEventListener('click', function (evt) {
         alert("Süsüm ben :))");
     }
 }, false);
+/*
+const readMeBtns = document.querySelectorAll('.readMore');
+readMeBtns.forEach(el => el.addEventListener('click', event => {
+    console.log("Süsüm Ben :))");
+}));
+*/

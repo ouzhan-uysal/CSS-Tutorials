@@ -1,24 +1,22 @@
-@media all and (max-width: 768px) {
-    body {
-        grid-template-areas: "nav" "header" "article" "aside" "footer";
-        grid-template-rows: 1fr 10% 1fr 1fr 10%;
-        grid-template-columns: 1fr;
-        #mainHeader {
-            .header-split {
-                img {
-                    display: none;
-                }
-            }
-        }
-        #mainArticle {
+@media screen and (max-width: 960px) {
+    .main-content {
+        article {
             display: none;
         }
-        #mainNav {
-            .nav-split {
-                .nav-links {
-                    display: none;
-                }
+        aside {
+            .grid-container {
+                grid-template-columns: repeat(auto-fill, minmax(10em, 1fr));
+                // grid-template-columns: 1fr;
+                // grid-template-rows: 25vh 25vh 25vh;
             }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .main-content {
+        aside {
+            overflow: auto;
         }
     }
 }
